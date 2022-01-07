@@ -1,4 +1,5 @@
 package domain;
+
 import kernel.ValueObjectID;
 
 import java.util.Objects;
@@ -10,7 +11,7 @@ public final class MembershipId implements ValueObjectID {
         this.value = value;
     }
 
-    public int getValue(){
+    public int getValue() {
         return value;
     }
 

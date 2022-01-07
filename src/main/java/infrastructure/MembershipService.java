@@ -16,8 +16,8 @@ public class MembershipService {
         this.paymentService = paymentService;
     }
 
-    void addMembership(Membership membership){
-        if(membershipValidator.test(membership) && paymentService.process()){
+    void addMembership(Membership membership) {
+        if (membershipValidator.test(membership) && paymentService.process()) {
             membershipRepository.add(membership);
         }
     }

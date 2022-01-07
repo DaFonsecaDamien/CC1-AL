@@ -1,9 +1,8 @@
 package infrastructure;
 
-import kernel.ApplicationLogger;
 import kernel.Logger;
 
-public class StubPaymentService implements PaymentService{
+public class StubPaymentService implements PaymentService {
 
     private final Logger logger;
 

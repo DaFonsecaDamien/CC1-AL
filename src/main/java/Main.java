@@ -1,4 +1,6 @@
-import domain.*;
+import domain.Membership;
+import domain.MembershipInvalidValidator;
+import domain.MembershipValidator;
 import infrastructure.InMemoryMembershipRepository;
 import infrastructure.MembershipController;
 import infrastructure.MembershipService;
@@ -16,10 +18,10 @@ public class Main {
 
         var membershipValidService = new MembershipService(membershipRepository, membershipValid, paymentService);
         var membershipValidController = new MembershipController(membershipValidService);
-        membershipValidController.addFromRequest(Membership.of("Damien","Da Fonseca"));
+        membershipValidController.addFromRequest(Membership.of("Damien", "Da Fonseca"));
 
         var membershipInvalidService = new MembershipService(membershipRepository, membershipInvalid, paymentService);
         var membershipInvalidController = new MembershipController(membershipInvalidService);
-        membershipInvalidController.addFromRequest(Membership.of("Theo","Douglas"));
+        membershipInvalidController.addFromRequest(Membership.of("Theo", "Douglas"));
     }
 }

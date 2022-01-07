@@ -1,6 +1,6 @@
 package domain;
+
 import infrastructure.InMemoryMembershipRepository;
-import infrastructure.MembershipRepository;
 import kernel.Entity;
 
 import java.util.Objects;
@@ -17,11 +17,11 @@ public final class Membership extends InMemoryMembershipRepository implements En
         this.lastname = lastname;
     }
 
-    public static Membership of(String firstname, String lastname){
-        return new Membership(firstname,lastname);
+    public static Membership of(String firstname, String lastname) {
+        return new Membership(firstname, lastname);
     }
 
-    public MembershipId getId(){
+    public MembershipId getId() {
         return id;
     }
 

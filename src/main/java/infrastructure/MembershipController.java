@@ -9,7 +9,7 @@ public class MembershipController {
         this.membershipService = membershipService;
     }
 
-    public void addFromRequest(Membership membership){
+    public void addFromRequest(Membership membership) {
         membershipService.addMembership(membership);
     }
 }
