@@ -24,5 +24,15 @@
 - Validator : Vérification du Membership avec un Predicate, simulation d'un Membership valide et invalide.
 - InMemoryMembership : afin de stocker les membres valide et ajouté à l'aide de l'inscription.
 
+## Choix d'implémentation
+
+Application réalisé avec une approche DDD (Domain-Driven Design).
+Domain : Contient l'ensemble des informations relatives au métier.
+Infrastructure : Contient les implémentations des différentes interfaces, se comporte comme une bibliothèque de support au domaine.
+
+- Utilisation de Commande et d'Event lors de la création de membres. Lancement d'évenements partagé grâce à un bus d'évenement.
+- Utilisation de Spring.
+- Gestion des membres grâce au repository pattern.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
